@@ -1,7 +1,5 @@
 package SegundaEvaluacion.poo.herencia.teoria.empresateleco;
 
-
-
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -9,16 +7,23 @@ public class Main {
     public static void main(String[] args) {
         Programador p = new Programador();
 
-        p.setNombre("A. Arenal");
-        p.setAñoNacimiento(1985);
-        p.setDirección("Pobladura del Valle, 15");
-        //p.setFechaInicio(new LocalDate());
-        p.setSalario(50_000L);
-        p.setLenguajes(new String[] { "Java", "JavaScript", "PHP" });
+        System.out.println(p);
 
-        System.out.println(p.getNombre()); // A. Arenal
-        System.out.println(p.getSalario()); // 50000
-        System.out.println(Arrays.toString(p.getLenguajes())); // [Java, JavaScript, PHP]
+        // setters heredados de Persona
+        p.setAñoNacimiento(2000);
+        p.setNombre("Pikachu");
+        p.setDirección("Calle Pez 5");
+
+        // setters heredados de Empleados
+        p.setFechaInicio(LocalDate.of(2000,12,02));
+        p.setSalario(5000L);
+
+        // setter de la propia clase Programador
+        p.setLenguajes(new String[] { "Java", "SQL", "HTML" });
+
+
+        System.out.println("*************");
+        System.out.println(p);
 
     }
 }

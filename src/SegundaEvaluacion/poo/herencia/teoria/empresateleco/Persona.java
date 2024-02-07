@@ -5,6 +5,15 @@ public class Persona {
     protected int añoNacimiento;
     protected String dirección;
 
+    // constructor de la superclase
+
+
+    public Persona(String nombre, int añoNacimiento, String dirección) {
+        this.nombre = nombre;
+        this.añoNacimiento = añoNacimiento;
+        this.dirección = dirección;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -27,5 +36,14 @@ public class Persona {
 
     public void setDirección(String dirección) {
         this.dirección = dirección;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", añoNacimiento=" + añoNacimiento +
+                ", dirección='" + dirección + '\'' +
+                '}';
     }
 }
