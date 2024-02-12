@@ -8,4 +8,15 @@ Añade un método mostrar(), que mostrará el resultado del método toString()
 public class Empresa {
     private String nombre;
 
+
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nombre='" + nombre + '\'' +
+                '}';
+    }
+
+    public void mostrar(){
+        System.out.println(toString());
+    }
 }

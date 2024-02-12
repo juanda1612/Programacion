@@ -1,4 +1,7 @@
 package SegundaEvaluacion.poo.herencia.ejercicios.empresa;
+
+import java.time.LocalDate;
+
 /*
 Clase Directivo, que
 hereda de Empleado.
@@ -10,4 +13,23 @@ Su constructor recibe todos los atributos como parámetros
 public class Directivo extends Empleado {
     private Categoria categoria;
 
+    public Directivo(String nombre, LocalDate fechaNacimiento, double sueldoBruto, Categoria categoria) {
+        super(nombre, fechaNacimiento, sueldoBruto);
+        this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Directivo{" +
+                "categoria=" + categoria +
+                '}';
+    }
+
+    public void mostrar() {
+        System.out.println("\n DATOS DEL DIRECTIVO:");
+        System.out.println("Esto de empleado:");
+        System.out.println(super.toString());
+        System.out.println("Y esto del Directivo:");
+        System.out.println(this.toString());
+    }
 }
