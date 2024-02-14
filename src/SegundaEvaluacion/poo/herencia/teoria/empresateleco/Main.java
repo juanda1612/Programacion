@@ -24,6 +24,10 @@ public class Main {
 
         System.out.println("*************");
         System.out.println(p);
+        System.out.println("***********");
+        p.añadirLenguaje("Ruby");
+        System.out.println(p);
+
 
     }
 }

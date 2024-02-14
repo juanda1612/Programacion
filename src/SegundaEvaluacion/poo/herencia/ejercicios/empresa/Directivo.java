@@ -1,6 +1,7 @@
 package SegundaEvaluacion.poo.herencia.ejercicios.empresa;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 /*
 Clase Directivo, que
@@ -22,14 +23,28 @@ public class Directivo extends Empleado {
     public String toString() {
         return "Directivo{" +
                 "categoria=" + categoria +
+                ", sueldoBruto=" + sueldoBruto +
                 '}';
     }
-
+    @Override
     public void mostrar() {
         System.out.println("\n DATOS DEL DIRECTIVO:");
-        System.out.println("Esto de empleado:");
-        System.out.println(super.toString());
-        System.out.println("Y esto del Directivo:");
+        super.mostrar();
         System.out.println(this.toString());
+    }
+
+    public void asignarPlus(){
+        sueldoBruto = sueldoBruto + pedirPlus();
+    }
+
+    private double pedirPlus(){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce plus: ");
+        return teclado.nextDouble();
+    }
+
+    @Override
+    public double calcularSalarioNeto() {
+        return  sueldoBruto - sueldoBruto * 5 / 100;
     }
 }

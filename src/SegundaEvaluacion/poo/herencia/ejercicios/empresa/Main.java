@@ -1,6 +1,7 @@
 package SegundaEvaluacion.poo.herencia.ejercicios.empresa;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /*
 Clase Main; contiene el método main, crea tres empleados (uno de ellos es un directivo de la categoría que quieras) y dos clientes y con todos ellos crea una empresa.
@@ -20,7 +21,22 @@ public class Main {
         Cliente cliente2 = new Cliente("pedro",LocalDate.of(2000,1,1));
         cliente2.mostrar();
 
-        Directivo directivo = new Directivo("pepito",LocalDate.of(2000,1,1),20000,Categoria.CEO);
+        Directivo directivo = new Directivo("pepito",LocalDate.of(2000,1,1),60000,Categoria.CEO);
         directivo.mostrar();
+        directivo.asignarPlus();
+        System.out.println("************");
+        directivo.mostrar();
+
+
+        // Probamos la clase Empresa
+        ArrayList<Empleado> empleados = new ArrayList<>();
+        empleados.add(empleado);
+        ArrayList<Cliente>clientes = new ArrayList<>();
+        clientes.add(cliente1);
+        clientes.add(cliente2);
+
+        Empresa empresa = new Empresa("sdsad", empleados, clientes);
+
+        empresa.mostrar();
     }
 }
