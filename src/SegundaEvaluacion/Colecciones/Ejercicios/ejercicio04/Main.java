@@ -19,17 +19,15 @@ public class Main {
 
         Scanner teclado = new Scanner(System.in);
         String palabra;
-        int contadorPreguntas;
-        int contadorAciertos;
-        int contadorErrores;
+        int contadorPreguntas = 0;
+        int contadorAciertos = 0;
+        int contadorErrores = 0;
+        int porcentaje;
         do {
-            contadorPreguntas = 0;
-            contadorAciertos = 0;
-            contadorErrores = 0;
 
             String palabraAleatoria = miDiccionario.palabraAleatoria();
 
-            System.out.println(palabraAleatoria + ": " + miDiccionario.primeraLetraTraduccion(palabraAleatoria) + "...");
+            System.out.println("\n"+ palabraAleatoria + ": " + miDiccionario.primeraLetraTraduccion(palabraAleatoria) + "...");
             System.out.println("Indique la respuesta: ");
             palabra = teclado.nextLine();
 
@@ -45,9 +43,13 @@ public class Main {
             contadorPreguntas++;
 
         }while (!palabra.equals("fin"));
+
+        porcentaje = contadorAciertos/contadorPreguntas * 100;
+
         System.out.println("FIN DEL PROGRAMA");
         System.out.println("Total preguntas: " + contadorPreguntas);
         System.out.println("Total aciertos: " + contadorAciertos);
         System.out.println("Total errores: " + contadorErrores);
+        System.out.println("Aciertos: " + porcentaje + "%");
     }
 }
