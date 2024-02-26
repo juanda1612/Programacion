@@ -1,8 +1,8 @@
 package SegundaEvaluacion.poo.herencia.ejercicios.clasesabstractas;
 
 public class Punto {
-    private double x;
-    private double y;
+     double x;
+     double y;
 
     public Punto(double x, double y) {
         this.x = x;
@@ -11,9 +11,6 @@ public class Punto {
 
     @Override
     public String toString() {
-        return "Linea{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return "(" + x + ", "+ y +')';
     }
 }
