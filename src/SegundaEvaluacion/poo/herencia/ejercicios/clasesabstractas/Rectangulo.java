@@ -32,11 +32,13 @@ public class Rectangulo extends Figura2D {
 
     @Override
     public ArrayList<Linea> crearLineas() {
-        return null;
+        ArrayList<Linea>lineas = new ArrayList<>();
+        return lineas;
     }
 
     @Override
     public double calcularPerimetro() {
+
         return 0;
     }
 
