@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         Empleado empleado1 = new Empleado(LocalDate.of(2000,01,1));
         empleado1.setNombreCompleto("Pepito Piedra Palo");
-        System.out.println(empleado1.getNombreCompleto());
 
         Empleado empleado2 = new Empleado(LocalDate.of(2000,02,2));
         empleado2.setNombreCompleto("Pablito Pepi Palo");

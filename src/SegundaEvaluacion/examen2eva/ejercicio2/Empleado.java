@@ -14,7 +14,7 @@ public class Empleado extends Persona{
 
     public Empleado(LocalDate fechaNacimiento) {
         super(fechaNacimiento);
-        this.contador++;
+        contador++;
         this.sueldoBruto = 15876;
         this.fechaContrato = LocalDate.now();
         this.supervisados = new ArrayList<>();
@@ -34,7 +34,7 @@ public class Empleado extends Persona{
     }
 
     public void aumentarSueldo (double porcentaje){
-        this.sueldoBruto = this.sueldoBruto * porcentaje; // no estoy como para pensar mas
+        this.sueldoBruto = this.sueldoBruto + (this.sueldoBruto * (porcentaje /100));
     }
 
     public void setFechaContrato(int dd, int mm, int aaaa) {
@@ -59,13 +59,16 @@ public class Empleado extends Persona{
         System.out.printf("\nSalario: %.2f", sueldoBruto);
 
         if (supervisor == null){
-            System.out.println("\nNadie");
+            System.out.println("\nSupervisado por: Nadie");
         }else {
-            System.out.print("\nSupervisado por: " + supervisor);
+            System.out.print("\nSupervisado por: " + supervisor.nombre);
         }
 
         if (supervisados != null){
-            System.out.print("\nSupervisa a: " + supervisados);
+            System.out.print("\nSupervisa a: ");
+            for (Empleado empleado : supervisados) {
+                System.out.print(empleado.nombre + " ");
+            }
         }
 
     }
