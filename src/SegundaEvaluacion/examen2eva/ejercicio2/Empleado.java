@@ -1,4 +1,4 @@
-package ejercicio2;
+package SegundaEvaluacion.examen2eva.ejercicio2;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

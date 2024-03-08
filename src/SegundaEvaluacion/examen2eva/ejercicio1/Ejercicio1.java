@@ -1,4 +1,4 @@
-package ejercicio1;
+package SegundaEvaluacion.examen2eva.ejercicio1;
 
 import com.sun.jdi.Value;
 
