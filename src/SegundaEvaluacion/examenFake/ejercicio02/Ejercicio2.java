@@ -7,7 +7,8 @@ public class Ejercicio2 {
     public static void main(String[] args) {
         int edad = pedirEdad();
         String tipo = devolverTipo(edad);
-        imprimirTicket(devolverTipo(edad), calcularPrecio(tipo));
+        int precio = calcularPrecio(tipo);
+        imprimirTicket(tipo, precio);
     }
 
     public static int pedirEdad(){
