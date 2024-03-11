@@ -12,11 +12,8 @@ public class Ejercicio1 {
         System.out.println(HEXaDEC());
         System.out.println(DECaHEX());
 
-        System.out.println("\nMostramos numeros aleatorios");
-        System.out.println(Arrays.toString(generarNumeros()));// no pilla los mismos numeros que los que usa en el color hexadecimal
-
-        System.out.println("\nMostramos color hexadecimal");
         String color = colorHexadecimal(DECaHEX(),generarNumeros());
+        System.out.println("\nMostramos color hexadecimal");
         System.out.println("#"+color);
 
         System.out.println("\nMostramos color rgb");
@@ -27,6 +24,7 @@ public class Ejercicio1 {
 
     public static HashMap<String,Integer> HEXaDEC(){
         HashMap<String,Integer> mapa = new HashMap<>();
+        mapa.put("0",0);
         mapa.put("1",1);
         mapa.put("2",2);
         mapa.put("3",3);
@@ -46,6 +44,7 @@ public class Ejercicio1 {
     }
     public static HashMap<Integer,String> DECaHEX(){
         HashMap<Integer, String> mapa = new HashMap<>();
+        mapa.put(0,"0");
         mapa.put(1,"1");
         mapa.put(2,"2");
         mapa.put(3,"3");
@@ -67,8 +66,10 @@ public class Ejercicio1 {
         Random generador = new Random();
         int[] numeros = new int[6];
         for (int i = 0; i < numeros.length; i++) {
-            numeros[i] = generador.nextInt(1, 16);
+            numeros[i] = generador.nextInt(0, 16);
         }
+        System.out.println("\nMostramos numeros aleatorios");
+        System.out.println(Arrays.toString(numeros));
         return numeros;
     }
 
