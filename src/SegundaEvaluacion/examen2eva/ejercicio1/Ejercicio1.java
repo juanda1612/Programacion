@@ -104,8 +104,8 @@ public class Ejercicio1 {
         coloresRgb[1] = String.valueOf(colorVerde);
         coloresRgb[2] = String.valueOf(colorAzul);
 
-        String colorRgb = String.join(" ", coloresRgb);
 
-        return colorRgb;
+
+        return String.join(" ", coloresRgb);
     }
 }
