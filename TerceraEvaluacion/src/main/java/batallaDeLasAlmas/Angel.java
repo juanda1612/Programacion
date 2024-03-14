@@ -1,8 +1,8 @@
 package batallaDeLasAlmas;
 
 public class Angel extends Incorporeo{
-    private int bondad;
-    private int maldad;
+    int bondad;
+    int maldad;
 
     public Angel(int bondad, int maldad) {
         this.bondad = bondad;

@@ -12,6 +12,8 @@ public class Humano extends Ser implements Espiritual{
         this.fe = fe;
         this.demonios = new ArrayList<>();
         this.angeles = new ArrayList<>();
+        añadirAngel();
+        añadirDemonios();
     }
     public void rezar(){
         fe++;
@@ -27,8 +29,8 @@ public class Humano extends Ser implements Espiritual{
         System.out.println("Datos del Humano:");
         System.out.println("=================");
         System.out.println("Fe: " + fe);
-        System.out.println("El humano tiene :" + angeles.get(0) + " angeles");
-        System.out.println("El humano tiene :" + demonios + " demonios");
+        System.out.println("El humano tiene: " + angeles.size() + " angeles");
+        System.out.println("El humano tiene: " + demonios.size() + " demonios");
     }
 
     static Random generador = new Random();
