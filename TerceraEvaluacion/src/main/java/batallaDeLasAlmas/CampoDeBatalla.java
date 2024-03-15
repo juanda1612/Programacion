@@ -17,9 +17,11 @@ public class CampoDeBatalla {
     public static void luchar(Humano humano){
         int bondadAngel = 0;
         double maldadDemonio = 0.0;
+
         for (Angel angel : humano.angeles){
             bondadAngel = bondadAngel + angel.bondad;
         }
+
         for (Demonio demonio : humano.demonios){
             maldadDemonio = maldadDemonio + demonio.getMaldad();
         }
