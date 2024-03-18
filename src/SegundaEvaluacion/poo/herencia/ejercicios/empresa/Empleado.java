@@ -13,8 +13,8 @@ ANTES DE ASIGNAR EL SUELDO BRUTO AL ATRIBUTO DEBEMOS COMPROBAR QUE EL PARÁMETRO
 public class Empleado extends Persona {
     protected double sueldoBruto;
 
-    public Empleado(String nombre, LocalDate fechaNacimiento, double sueldoBruto) {
-        super(nombre, fechaNacimiento);
+    public Empleado(String nombre, LocalDate fechaNacimiento, String dni, double sueldoBruto) {
+        super(nombre, fechaNacimiento, dni);
         if (sueldoBruto <= 0) {
             this.sueldoBruto = 15786;
         }else {

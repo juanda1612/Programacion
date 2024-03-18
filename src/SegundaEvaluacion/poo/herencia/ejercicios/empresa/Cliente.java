@@ -13,8 +13,8 @@ public class Cliente extends Persona {
     private String telefonoDeContacto;
 
 
-    public Cliente(String nombre, LocalDate fechaNacimiento, String telefonoDeContacto) {
-        super(nombre, fechaNacimiento);
+    public Cliente(String nombre, LocalDate fechaNacimiento, String dni, String telefonoDeContacto) {
+        super(nombre, fechaNacimiento,dni);
         int cifras = 0;
         if (telefonoDeContacto.length() == 9) {
             for (int i = 0; i < telefonoDeContacto.length(); i++) {

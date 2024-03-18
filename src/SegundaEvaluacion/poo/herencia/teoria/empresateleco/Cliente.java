@@ -4,8 +4,8 @@ public class Cliente extends Persona {
     protected String idContrato;
     protected boolean gold;
 
-    public Cliente(String nombre, int añoNacimiento, String dirección, String idContrato, boolean gold) {
-        super(nombre, añoNacimiento, dirección);
+    public Cliente(String nombre, int añoNacimiento, String dirección, String dni, String idContrato, boolean gold) {
+        super(nombre, añoNacimiento, dirección, dni);
         this.idContrato = idContrato;
         this.gold = gold;
     }
@@ -34,6 +34,7 @@ public class Cliente extends Persona {
                 ", nombre='" + nombre + '\'' +
                 ", añoNacimiento=" + añoNacimiento +
                 ", dirección='" + dirección + '\'' +
+                ", dni='" + dni + '\'' +
                 '}';
     }
 }

@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class Manager extends Empleado {
     protected boolean sonrisa;
 
-    public Manager(String nombre, int añoNacimiento, String dirección, LocalDate fechaInicio, Long salario, boolean sonrisa) {
-        super(nombre, añoNacimiento, dirección, fechaInicio, salario);
+    public Manager(String nombre, int añoNacimiento, String dirección, String dni, LocalDate fechaInicio, Long salario, boolean sonrisa) {
+        super(nombre, añoNacimiento, dirección, dni, fechaInicio, salario);
         this.sonrisa = sonrisa;
     }
 
@@ -27,6 +27,7 @@ public class Manager extends Empleado {
                 ", nombre='" + nombre + '\'' +
                 ", añoNacimiento=" + añoNacimiento +
                 ", dirección='" + dirección + '\'' +
+                ", dni='" + dni + '\'' +
                 '}';
     }
 }

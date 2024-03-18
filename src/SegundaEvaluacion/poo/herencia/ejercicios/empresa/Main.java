@@ -11,17 +11,17 @@ public class Main {
         Persona persona = new Persona("Pedro",LocalDate.of(2000,1,1));
         persona.mostrar();
 
-        Empleado empleado = new Empleado("pedro",LocalDate.of(2000,1,1), 35000);
+        Empleado empleado = new Empleado("pedro",LocalDate.of(2000,1,1),"1111111" ,35000);
         empleado.mostrar();
         //System.out.println(empleado.calcularSalarioNeto());
 
-        Cliente cliente1 = new Cliente("pedro",LocalDate.of(2000,1,1),"125364879");
+        Cliente cliente1 = new Cliente("pedro",LocalDate.of(2000,1,1),"125364879","5115151");
         cliente1.mostrar();
 
         Cliente cliente2 = new Cliente("pedro",LocalDate.of(2000,1,1));
         cliente2.mostrar();
 
-        Directivo directivo = new Directivo("pepito",LocalDate.of(2000,1,1),60000,Categoria.CEO);
+        Directivo directivo = new Directivo("pepito",LocalDate.of(2000,1,1),"111111",60000,Categoria.CEO);
         directivo.mostrar();
         directivo.asignarPlus();
         System.out.println("************");
@@ -38,5 +38,14 @@ public class Main {
         Empresa empresa = new Empresa("sdsad", empleados, clientes);
 
         empresa.mostrar();
+
+        System.out.println("\n**METODO EQUALS**");
+        Empleado empleado1 = new Empleado("pablo",LocalDate.of(2000,1,1),"1111111111", 22.5);
+        Empleado empleado2 = new Empleado("Pedro",LocalDate.of(2000,1,1),"1111111111", 25.5);
+        if (empleado1.equals(empleado2)){
+            System.out.println("ese empleado ya existe");
+        }else {
+            System.out.println(empleado2);
+        }
     }
 }

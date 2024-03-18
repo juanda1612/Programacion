@@ -28,6 +28,8 @@ public class Main {
         p.añadirLenguaje("Ruby");
         System.out.println(p);
 
+        System.out.println("\nPRUEBAS");
+
 
     }
 }

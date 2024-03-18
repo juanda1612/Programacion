@@ -6,13 +6,13 @@ import java.util.Arrays;
 public class Programador  extends Empleado{
     protected String[] lenguajes;
 
-    public Programador(String nombre, int añoNacimiento, String dirección, LocalDate fechaInicio, Long salario, String[] lenguajes) {
-        super(nombre, añoNacimiento, dirección, fechaInicio, salario);
+    public Programador(String nombre, int añoNacimiento, String dirección, String dni, LocalDate fechaInicio, Long salario, String[] lenguajes) {
+        super(nombre, añoNacimiento, dirección, dni, fechaInicio, salario);
         this.lenguajes = lenguajes;
     }
 
     public Programador(){
-        super("",0,"",LocalDate.of(2000,12,02),0L);
+        super("",0,"","4454551",LocalDate.of(2000,12,02) ,2l);
     }
 
     public String[] getLenguajes() {
@@ -32,6 +32,7 @@ public class Programador  extends Empleado{
                 ", nombre='" + nombre + '\'' +
                 ", añoNacimiento=" + añoNacimiento +
                 ", dirección='" + dirección + '\'' +
+                ", dni='" + dni + '\'' +
                 '}';
     }
 

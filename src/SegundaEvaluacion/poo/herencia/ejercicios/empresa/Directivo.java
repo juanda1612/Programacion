@@ -14,8 +14,8 @@ Su constructor recibe todos los atributos como parámetros
 public class Directivo extends Empleado {
     private Categoria categoria;
 
-    public Directivo(String nombre, LocalDate fechaNacimiento, double sueldoBruto, Categoria categoria) {
-        super(nombre, fechaNacimiento, sueldoBruto);
+    public Directivo(String nombre, LocalDate fechaNacimiento,String dni, double sueldoBruto, Categoria categoria) {
+        super(nombre, fechaNacimiento, dni ,sueldoBruto);
         this.categoria = categoria;
     }
 

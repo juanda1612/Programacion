@@ -8,7 +8,14 @@ Clase Persona, con los atributos nombre y edad (con los modificadores de acceso 
 public class Persona {
     protected String nombre;
     protected LocalDate fechaNacimiento;
+    protected String dni;
 
+
+    public Persona(String nombre, LocalDate fechaNacimiento, String dni) {
+        this.nombre = nombre;
+        this.fechaNacimiento = fechaNacimiento;
+        this.dni = dni;
+    }
 
     public Persona(String nombre, LocalDate fechaNacimiento) {
         this.nombre = nombre;
@@ -19,11 +26,22 @@ public class Persona {
     public String toString() {
         return "Persona{" +
                 "nombre='" + nombre + '\'' +
-                ", edad=" + fechaNacimiento +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", dni='" + dni + '\'' +
                 '}';
     }
 
     public void mostrar(){
         System.out.println(toString());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Persona){
+            Persona temp = (Persona) obj;
+            return this.dni == temp.dni;
+        }else {
+            return false;
+        }
     }
 }

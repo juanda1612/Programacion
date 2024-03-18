@@ -8,8 +8,9 @@ public class Empleado extends Persona{
 
     // constructor de la subclase: tiene que empezar llamndo al constructor de la otra superclase con la palabra super
 
-    public Empleado(String nombre, int añoNacimiento, String dirección, LocalDate fechaInicio, Long salario) {
-        super(nombre, añoNacimiento, dirección);
+
+    public Empleado(String nombre, int añoNacimiento, String dirección, String dni, LocalDate fechaInicio, Long salario) {
+        super(nombre, añoNacimiento, dirección, dni);
         this.fechaInicio = fechaInicio;
         this.salario = salario;
     }
@@ -38,6 +39,7 @@ public class Empleado extends Persona{
                 ", nombre='" + nombre + '\'' +
                 ", añoNacimiento=" + añoNacimiento +
                 ", dirección='" + dirección + '\'' +
+                ", dni='" + dni + '\'' +
                 '}';
     }
 }
