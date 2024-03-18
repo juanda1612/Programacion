@@ -1,14 +1,18 @@
 package SegundaEvaluacion.poo.clasesyobjetos.ejercicios.hotel;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
         // aquí creamos los objetos
         Hotel hotel1 = new Hotel(1, Zona.PLAYA, 75);
+        Hotel hotel2 = new Hotel(1, Zona.PLAYA, 75);
+
         System.out.println(hotel1);
         hotel1.setPrecio(600);
         System.out.println(hotel1);
         hotel1.setPrecio(60);
         System.out.println(hotel1);
+
+        System.out.println("Son iguales? " + hotel1.equals(hotel2));
 
     }
 }
