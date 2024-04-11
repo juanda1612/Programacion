@@ -32,9 +32,9 @@ public class Main {
         personas.add(persona6);
 
         List<Producto> productos = new ArrayList<>();
-        Producto producto1 = new Producto("Movil",500.0);
-        Producto producto2 = new Producto("TV",1000.0);
-        Producto producto3 = new Producto("Altavoz",100.0);
+        Producto producto1 = new Producto("Movil",500.10);
+        Producto producto2 = new Producto("TV",1000.20);
+        Producto producto3 = new Producto("Altavoz",1000.0);
         Producto producto4 = new Producto("Palo",9.0);
         Producto producto5 = new Producto("Disfraz",5.0);
         productos.add(producto1);
@@ -121,6 +121,11 @@ public class Main {
         };
         System.out.println(ejercicio7.personasMayor30(personas));
 
+        personas.stream()
+                .filter(persona -> persona.edad > 30)
+                .forEach(persona -> System.out.println(persona));
+
+
         System.out.println("\nEJERCICIO 1.8");
         ImprimirPrecioTotal ejercicio8 = lista ->{
             double total = 0.0;
@@ -131,19 +136,21 @@ public class Main {
         };
         System.out.println(ejercicio8.precioTotal(productos));
 
+        // Con stream
+        System.out.println("CON STREAM");
+        System.out.println(productos.stream().mapToDouble(producto -> producto.precio).sum());
+
         System.out.println("\nEJERCICIO 1.9");
-        productos.sort((o1, o2) -> {
-            if (o1.precio > o2.precio){
-                return -1;
-            } else if (o1.precio < o2.precio) {
-                return 1;
-            }else {
-                return 0;
-            }
-        });
+        productos.sort((o1, o2) -> (int) (o2.precio - o1.precio));
+
         for (Producto elemento : productos){
             System.out.println(elemento);
         }
+
+        System.out.println("\nCON STREAM");
+        productos.stream()
+                .sorted((o1, o2) -> (int) (o2.precio*100 - o1.precio*100))
+                .forEach(System.out::println);
 
         System.out.println("\nEJERCICIO 1.10");
         ImprimirProductoMenor10 ejercicio10 = lista ->{
@@ -156,5 +163,11 @@ public class Main {
             return productosMenor10;
         };
         System.out.println(ejercicio10.productoMenor10(productos));
+
+
+        System.out.println("\nCON STREAM");
+        productos.stream()
+                .filter(producto -> producto.precio<10)
+                .forEach(producto -> System.out.println(producto));
     }
 }
