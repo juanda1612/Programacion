@@ -14,7 +14,7 @@ public class Main {
 
 
         System.out.println("\nEJERCICIO 3");
-        Function<Integer, Double> ejercicio3 = porcentaje -> porcentaje * 0.1;
+        Function<Integer, Double> ejercicio3 = porcentaje -> porcentaje * 0.10;
         System.out.println(ejercicio3.apply(10));
 
     }
