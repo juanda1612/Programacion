@@ -63,6 +63,8 @@ public class Main {
         System.out.println(numeros.stream()
                                   .mapToInt(numero-> numero)
                                   .sum());
+        // O TAMBIEN PUEDE SER
+        System.out.println(numeros.stream().reduce(0,(o1, o2) -> o1 + o2));
 
         //Suma todos los elementos mayores o iguales a 5(también los que se repitan).
         System.out.println("\nSUMADO MAYOR A 5");
