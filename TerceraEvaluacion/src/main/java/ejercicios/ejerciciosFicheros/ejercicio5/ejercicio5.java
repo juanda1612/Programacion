@@ -4,6 +4,7 @@ import ejercicios.ejerciciosFicheros.Ruta;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,6 +15,15 @@ public class ejercicio5 {
         File archivo = new File(ruta.ruta()+"dataset_91007.txt");
         Scanner lector = new Scanner(archivo);
 
-        System.out.println(lector.nextLine());
+        int numero = 0;
+        while (lector.hasNext()){
+            int numeroLargo = lector.nextInt();
+            if (numeroLargo > numero){
+                numero = numeroLargo;
+            }
+        }
+        System.out.println(numero);
+
+
     }
 }
