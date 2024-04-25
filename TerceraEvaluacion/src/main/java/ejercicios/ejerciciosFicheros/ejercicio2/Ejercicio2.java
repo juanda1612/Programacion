@@ -14,6 +14,7 @@ public class Ejercicio2 {
         File fichero = new File(ruta.ruta() +"Restaurantes.csv");
         Scanner lector = new Scanner(fichero);
         String[]datos = new String[0];
+
         while (lector.hasNext()){
             datos = lector.nextLine().split(",");
             if (datos[4].startsWith("6")){
