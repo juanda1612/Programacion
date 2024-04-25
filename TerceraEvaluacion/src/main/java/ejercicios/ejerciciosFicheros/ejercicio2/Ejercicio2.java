@@ -13,9 +13,9 @@ public class Ejercicio2 {
     public static void main(String[] args) throws FileNotFoundException {
         File fichero = new File(ruta.ruta() +"Restaurantes.csv");
         Scanner lector = new Scanner(fichero);
-
+        String[]datos = new String[0];
         while (lector.hasNext()){
-            String[]datos = lector.nextLine().split(",");
+            datos = lector.nextLine().split(",");
             if (datos[4].startsWith("6")){
                 System.out.println(Arrays.toString(datos));
             }
