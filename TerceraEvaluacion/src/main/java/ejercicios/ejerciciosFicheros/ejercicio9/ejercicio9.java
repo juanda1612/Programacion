@@ -16,15 +16,36 @@ public class ejercicio9 {
         try {
             File fichero = new File(ruta.ruta()+"datos.txt");
             lector = new Scanner(fichero);
+            int contador = 0;
+            boolean palabraEncontrada = false;
+
+            //PRIMERA VERSION
+            /*
             String[] lineas = new String[0];
 
-            while (lector.hasNext()){
+            while (lector.hasNextLine()){
+                contador++;
                 lineas = lector.nextLine().split(" ");
                 for (int i = 0; i < lineas.length; i++) {
-                    if (lineas[i].contains(fragmento)){
-                        System.out.println(Arrays.toString(lineas));
+                    if (lineas[i].equalsIgnoreCase(fragmento)){
+                        palabraEncontrada = true;
+                        System.out.println(contador + " " + Arrays.toString(lineas));
                     }
                 }
+            }
+
+             */
+            //SEGUNDA VERSION
+            while (lector.hasNextLine()){
+                contador++;
+                String linea = lector.nextLine();
+                if (linea.equalsIgnoreCase(fragmento)){
+                    palabraEncontrada = true;
+                    System.out.println("Numero de linea:"+contador + ", " + linea);
+                }
+            }
+            if (!palabraEncontrada){
+                System.out.println("No se encuentra la palabra");
             }
 
         }catch (Exception e){
