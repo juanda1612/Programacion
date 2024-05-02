@@ -1,0 +1,13 @@
+Contactos
+Crea un programa en Java para gestionar una lista de contactos. Cada contacto estará representado por la clase Contacto, que tendrá los siguientes atributos:
+
+nombre: una cadena de caracteres que representa el nombre del contacto.
+telefono: una cadena de caracteres que representa el número de teléfono del contacto.
+
+Debes crear una clase llamada GestorContactos, que contendrá los siguientes métodos:
+
+guardarContactos: Este método recibirá una lista de contactos y un nombre de archivo, y guardará los contactos en ese archivo en formato CSV (valores separados por comas).
+
+cargarContactos: Este método recibirá el nombre de archivo de donde se cargarán los contactos en formato CSV y devolverá una lista de contactos.
+
+Crea una clase Main donde deberás instanciar algunos contactos, añadirlos a una lista, utilizar el método guardarContactos de GestorContactos para guardar la lista en un archivo y luego utilizar el método cargarContactos para cargar los contactos desde el archivo y mostrarlos por consola.

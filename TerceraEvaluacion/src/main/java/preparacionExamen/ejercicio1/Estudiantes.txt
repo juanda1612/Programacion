@@ -1,0 +1,18 @@
+Estudiantes
+
+Crea un programa en Java para gestionar una lista de estudiantes. Cada estudiante estará representado por la clase Estudiante, que tendrá los siguientes atributos:
+
+nombre: una cadena de caracteres (String).
+edad: un número entero (int).
+calificaciones: un array de números que representa las calificaciones del estudiante en diferentes asignaturas(double).
+Tambien debes crear un metodo llamado "calcularMedia" que no recibe nada y devuelve un double.
+
+Debes crear una clase llamada GestorEstudiantes, que contendrá los siguientes métodos:
+
+ordenarPorMedia: Este método recibirá una lista de estudiantes y los ordenará en función de su media de calificaciones. Deberás utilizar expresiones lambda para ordenarlo (si no sale, podeis usar metodos normales).
+
+mostrarEstudiantes: Este método recibirá una lista de estudiantes y los mostrará por consola, mostrando su nombre, edad y promedio de calificaciones.
+
+(Son metodos estaticos)
+
+Además, crea una clase Main donde deberás crear algunos estudiantes, añadirlos a una lista, utilizar el método ordenarPorPromedio para ordenar la lista y finalmente mostrar los estudiantes ordenados usando el método mostrarEstudiantes.

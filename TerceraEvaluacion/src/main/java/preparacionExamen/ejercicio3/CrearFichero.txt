@@ -1,0 +1,14 @@
+Archivos
+Crea un programa en Java que permita la gestión básica de archivos. El programa debe cumplir con las siguientes especificaciones:
+
+Crear un archivo: Debe permitir al usuario crear un nuevo archivo de texto especificando el nombre del archivo.
+
+Escribir en un archivo: Debe permitir al usuario escribir contenido en un archivo existente.
+
+Leer un archivo: Debe permitir al usuario leer el contenido de un archivo existente.
+
+Eliminar un archivo: Debe permitir al usuario eliminar un archivo existente.
+
+(todos estos metodos incluido el menu seran independientes).
+
+El programa debe proporcionar un menú que permita al usuario seleccionar la acción que desea realizar.

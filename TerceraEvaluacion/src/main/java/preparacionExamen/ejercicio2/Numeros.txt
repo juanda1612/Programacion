@@ -1,0 +1,3 @@
+a)A partir de una lista de 20 enteros aleatorios entre -10 y 10, determina cuál es el mayor, cuál es el menor, el valor promedio.
+
+b)Crear dos stream, uno con los números positivos y otro con los negativos, todos ellos sin repetir.
