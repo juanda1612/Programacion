@@ -61,7 +61,7 @@ public class Main {
         //Suma todos los elementos de la lista.
         System.out.println("\nSUMADOS");
         System.out.println(numeros.stream()
-                                  .mapToInt(numero-> numero)
+                                  .mapToInt(numero -> numero)
                                   .sum());
         // O TAMBIEN PUEDE SER
         System.out.println(numeros.stream().reduce(0,(o1, o2) -> o1 + o2));
@@ -76,7 +76,7 @@ public class Main {
         //Calcula el promedio de todos los elementos de la lista(sin eliminar los repetidos).
         System.out.println("\nPROMEDIO DE LA LISTA");
         System.out.println(numeros.stream()
-                                  .mapToDouble(numero-> numero)
+                                  .mapToDouble(numero -> numero)
                                   .average().orElse(0));
     }
 }

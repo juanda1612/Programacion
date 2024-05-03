@@ -13,23 +13,51 @@ import java.util.Scanner;
 
 class Gestor {
     static Ruta ruta = new Ruta();
-    public static void guardarContactos(List<Contacto> contactos, String nombre) {
-        try{
-            FileWriter escritor = new FileWriter(ruta.ruta()+nombre, true);
-            for (Contacto elemento : contactos) {
-                escritor.write(elemento.getNombre() + "" + elemento.getTelefono() + "\n");
+    public static void crearFichero(String nombreFichero){
+        try {
+            File fichero = new File(ruta.ruta() + nombreFichero);
+            Boolean creado = fichero.createNewFile();
+            if (creado){
+                System.out.println("Se a creado el fichero " + fichero.getName());
+            }else {
+                System.out.println("No se ha podido crear el fichero");
             }
-            System.out.println("Contactos guardados exitosamente en el archivo " + nombre);
+        }catch (Exception e){
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public static void guardarContactos(List<Contacto> contactos, String nombre) {
+        FileWriter escritor = null;
+        try{
+            File fichero = new File(ruta.ruta() + nombre);
+            escritor = new FileWriter(fichero, true);
+
+            if (fichero.exists()){
+                for (Contacto contacto : contactos) {
+                    escritor.write("Nombre:"+contacto.getNombre() + " ," +"Telefono:"+ contacto.getTelefono() + "\n");
+                }
+                System.out.println("Contactos guardados exitosamente en el archivo " + nombre);
+            }else {
+                System.out.println("El fichero no existe");
+            }
         } catch (IOException e) {
             System.err.println("Error al guardar los contactos: " + e.getMessage());
+        }finally {
+            try {
+                escritor.close();
+            } catch (IOException e) {
+                System.out.println("Erorr" + e.getMessage());;
+            }
         }
     }
     public static void imprimirContactos(String nombre){
         Scanner lector = null;
         try {
-            lector = new Scanner(ruta.ruta()+nombre);
+            File fichero = new File(ruta.ruta() + nombre);
+            lector = new Scanner(fichero);
             while (lector.hasNextLine()) {
-                String[] partes = lector.nextLine().split("");
+                String[] partes = lector.nextLine().split(" ,");
                 System.out.println(Arrays.toString(partes));
             }
         }catch (Exception e){
@@ -37,23 +65,5 @@ class Gestor {
         }finally {
             lector.close();
         }
-    }
-
-    public static List<Contacto> cargarContactos(String nombre) {
-        List<Contacto> contactos = new ArrayList<>();
-
-        Scanner lector = null;
-        try {
-            lector = new Scanner(ruta.ruta()+nombre);
-            while (lector.hasNextLine()) {
-                String[] partes = lector.nextLine().split("");
-                 contactos.add(new Contacto(partes[0], partes[1]));
-            }
-        }catch (Exception e){
-            System.out.println("Error:" + e.getMessage());
-        }finally {
-            lector.close();
-        }
-        return contactos;
     }
 }
